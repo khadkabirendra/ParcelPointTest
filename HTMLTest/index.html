@@ -1,0 +1,87 @@
+
+
+<html>
+
+<head>
+<title></title>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<Script>
+$(document).ready(function() {
+	$("#txtname1").focus();
+    $("#bt1").click(function(){
+        $("#form1").hide();
+ 	$("#form2").show();
+	$("#txtadd").focus();
+    }); 
+
+	$("#bt2").click(function(){
+        $("#form1").hide();
+ 	$("#form2"). hide();
+	
+	
+	$("#name1").html($("#txtname1").val());
+	$("#name2").html($("#txtname2").val());
+	$("#add").html($("#txtadd").val());
+	$("#phone").html($("#txtphone").val());
+
+	$("#view"). show();
+
+    }); 
+});
+</Script>
+</head>
+<body>
+
+<form id="form1" name="form1">
+<table border=0 width="50%">
+	<tr>
+		<td width="25%">First Name :</td><td><input type="text" id="txtname1"/></td>
+	</tr>
+	<tr>
+		<td width="25%">Last Name :</td><td><input type="text" id="txtname2"/></td>
+	</tr>
+	<tr>
+		<td width="25%"></td><td><input type="button" id="bt1" value="Next"></td>
+	</tr>
+</table>
+	
+</form>
+
+<form id="form2" name="form2" style="display:none">
+<table border=0 width="50%">
+	<tr>
+		<td width="25%">Address :</td><td><input type="text" id="txtadd"/></td>
+	</tr>
+	<tr>
+		<td width="25%">Phone :</td><td><input type="text" id="txtphone"/></td>
+	</tr>
+	<tr>
+		<td width="25%"></td><td><input type="button" id="bt2" value="Next"></td>
+	</tr>
+</table>
+
+
+</form>
+
+<dic id="view"  style="display:none">
+<table border=0 width="50%">
+	<tr>
+		<td width="25%">First Name :</td><td> <span id=name1></span></td>
+	</tr>
+	<tr>
+		<td width="25%">Last Name :</td><td> <span id=name2></span></td>
+	</tr>
+	<tr>
+		<td width="25%">Address :</td><td> <span id=add></span></td>
+	</tr>
+	<tr>
+		<td width="25%">Phone :</td><td> <span id=phone></span></td>
+	</tr>
+	
+</table>
+
+</div>
+</body>
+
+</html>
